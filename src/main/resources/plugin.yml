@@ -1,0 +1,36 @@
+name: BanBook
+version: '1.0'
+main: io.github.cats1337.banBook.BanBook
+api-version: '1.21'
+authors: [ Cats1337 ]
+description: Basically item Death Note
+
+commands:
+  banbook:
+    description: Main command for BanBook
+    usage: /banbook <get|give|reload|remove>
+    permission: banbook.help
+    aliases: [bb]
+
+permissions:
+  banbook.help:
+      description: Allows using the BanBook help command.
+      default: true
+  banbook.use:
+    description: Allows using the BanBook.
+    default: true
+  banbook.reload:
+    description: Allows reloading the BanBook config.
+    default: op
+  banbook.get:
+    description: Allows getting the BanBook.
+    default: op
+  banbook.give:
+    description: Allows giving the BanBook.
+    default: op
+  banbook.remove:
+    description: Allows removing the BanBook.
+    default: op
+  banbook.bypass:
+    description: Allows bypassing the BanBook.
+    default: op
