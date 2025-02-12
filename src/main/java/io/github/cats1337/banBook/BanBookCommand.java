@@ -29,6 +29,10 @@ public class BanBookCommand extends BanBookTabCompletion implements CommandExecu
 
         switch (subCommand) {
             case "get":
+                if (!sender.hasPermission("banbook.get")) {
+                    sender.sendMessage("§cYou do not have permission to use this command.");
+                    return false;
+                }
                 if (!(sender instanceof Player player)) {
                     sender.sendMessage("§cYou must be a player to use this command!");
                     return false;
@@ -43,6 +47,10 @@ public class BanBookCommand extends BanBookTabCompletion implements CommandExecu
                 break;
 
             case "give":
+                if (!sender.hasPermission("banbook.give")) {
+                    sender.sendMessage("§cYou do not have permission to use this command.");
+                    return false;
+                }
                 if (args.length < 2) {
                     sender.sendMessage("§cUsage: /BanBook give <player>");
                     return false;
